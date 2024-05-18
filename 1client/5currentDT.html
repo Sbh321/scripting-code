@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Date and Time</title>
+  </head>
+  <body>
+    <h1>Current Date and Time</h1>
+    <h2 id="dateTime">Loading...</h2>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateDateTime() {
+          const now = new Date();
+          const dateTimeString = now.toLocaleString();
+          document.getElementById("dateTime").innerText = dateTimeString;
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+      });
+    </script>
+  </body>
+</html>
